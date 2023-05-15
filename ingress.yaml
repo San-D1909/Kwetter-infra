@@ -14,56 +14,20 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: frontend-service
+                name: kwetter-frontend-service
                 port:
                   number: 80
           - path: /api/add
             pathType: Prefix
             backend:
               service:
-                name: backendadd-service
+                name: tweetapi-service
                 port:
                   number: 80
           - path: /api/bid
             pathType: Prefix
             backend:
               service:
-                name: backendbid-service
+                name: userprofileapi-service
                 port:
                   number: 80
-          - path: /api/search
-            pathType: Prefix
-            backend:
-              service:
-                name: backendsearch-service
-                port:
-                  number: 80
-          - path: /api/image
-            pathType: Prefix
-            backend:
-              service:
-                name: backendimage-service
-                port:
-                  number: 80
-          - path: /api/auth
-            pathType: Prefix
-            backend:
-              service:
-                name: backendauth-service
-                port:
-                  number: 80
-          - path: /api/message
-            pathType: Prefix
-            backend:
-              service:
-                name: backendmessage-service
-                port:
-                  number: 80
-          - path: /api/notification
-            pathType: Prefix
-            backend:
-              service:
-                name: backendnotification-service
-                port:
-                  number: 80
-          

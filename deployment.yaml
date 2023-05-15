@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: kwetter-frontend
   labels:
-    app: frontend
+    app: kwetter-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: kwetter-frontend
   template:
     metadata:
       labels:
-        app: frontend
+        app: kwetter-frontend
     spec:
       containers:
         - name: frontend
-          image: bramvan/frontend
+          image: sander1909/kwetter-frontend
           ports:
             - containerPort: 80
           resources:
@@ -27,22 +27,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backendadd
+  name: tweetapi
   labels:
-    app: backendadd
+    app: tweetapi
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backendadd
+      app: tweetapi
   template:
     metadata:
       labels:
-        app: backendadd
+        app: tweetapi
     spec:
       containers:
-        - name: backendadd
-          image: bramvan/backendadd
+        - name: tweetapi
+          image: sander1909/tweetapi
           ports:
             - containerPort: 80
           resources:
@@ -53,152 +53,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backendbid
+  name: userprofileapi
   labels:
-    app: backendbid
+    app: userprofileapi
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backendbid
+      app: userprofileapi
   template:
     metadata:
       labels:
-        app: backendbid
+        app: userprofileapi
     spec:
       containers:
-        - name: backendbid
-          image: bramvan/backendbid
-          ports:
-            - containerPort: 80
-          resources:
-            limits:
-              memory: 512Mi
-              cpu: "1"
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: backendsearch
-  labels:
-    app: backendsearch
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: backendsearch
-  template:
-    metadata:
-      labels:
-        app: backendsearch
-    spec:
-      containers:
-        - name: backendsearch
-          image: bramvan/backendsearch
-          ports:
-            - containerPort: 80
-          resources:
-            limits:
-              memory: 512Mi
-              cpu: "1"
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: backendimage
-  labels:
-    app: backendimage
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: backendimage
-  template:
-    metadata:
-      labels:
-        app: backendimage
-    spec:
-      containers:
-        - name: backendimage
-          image: bramvan/backendimage
-          ports:
-            - containerPort: 80
-          resources:
-            limits:
-              memory: 512Mi
-              cpu: "1"
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: backendauth
-  labels:
-    app: backendauth
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: backendauth
-  template:
-    metadata:
-      labels:
-        app: backendauth
-    spec:
-      containers:
-        - name: backendauth
-          image: bramvan/backendauth
-          ports:
-            - containerPort: 80
-          resources:
-            limits:
-              memory: 512Mi
-              cpu: "1"
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: backendmessage
-  labels:
-    app: backendmessage
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: backendmessage
-  template:
-    metadata:
-      labels:
-        app: backendmessage
-    spec:
-      containers:
-        - name: backendmessage
-          image: bramvan/backendmessage
-          ports:
-            - containerPort: 80
-          resources:
-            limits:
-              memory: 512Mi
-              cpu: "1"
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: backendnotification
-  labels:
-    app: backendnotification
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: backendnotification
-  template:
-    metadata:
-      labels:
-        app: backendnotification
-    spec:
-      containers:
-        - name: backendnotification
-          image: bramvan/backendnotification
+        - name: userprofileapi
+          image: sander1909/userprofileapi
           ports:
             - containerPort: 80
           resources:

@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-service
+  name: kwetter-frontend-service
 spec:
   selector:
-    app: frontend
+    app: kwetter-frontend
   ports:
     - protocol: TCP
       port: 80
@@ -13,10 +13,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: backendadd-service
+  name: userprofileapi-service
 spec:
   selector:
-    app: backendadd
+    app: userprofileapi
   ports:
     - protocol: TCP
       port: 80
@@ -25,70 +25,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: backendbid-service
+  name: tweetapi-service
 spec:
   selector:
-    app: backendbid
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: backendsearch-service
-spec:
-  selector:
-    app: backendsearch
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: backendimage-service
-spec:
-  selector:
-    app: backendimage
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: backendauth-service
-spec:
-  selector:
-    app: backendauth
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: backendmessage-service
-spec:
-  selector:
-    app: backendmessage
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: backendnotification-service
-spec:
-  selector:
-    app: backendnotification
+    app: tweetapi
   ports:
     - protocol: TCP
       port: 80
