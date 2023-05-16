@@ -17,14 +17,14 @@ spec:
                 name: kwetter-frontend-service
                 port:
                   number: 80
-          - path: /api/add
+          - path: /api/tweetapi
             pathType: Prefix
             backend:
               service:
                 name: tweetapi-service
                 port:
                   number: 80
-          - path: /api/bid
+          - path: /api/userprofileapi
             pathType: Prefix
             backend:
               service:
