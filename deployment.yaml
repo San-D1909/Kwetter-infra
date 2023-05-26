@@ -22,7 +22,7 @@ spec:
           resources:
             limits:
               memory: 512Mi
-              cpu: "1"
+              cpu: "0.5"
 ---            
 apiVersion: apps/v1
 kind: Deployment
@@ -48,7 +48,7 @@ spec:
           resources:
             limits:
               memory: 512Mi
-              cpu: "1"
+              cpu: "0.5"
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -74,4 +74,4 @@ spec:
           resources:
             limits:
               memory: 512Mi
-              cpu: "1"
+              cpu: "0.5"
