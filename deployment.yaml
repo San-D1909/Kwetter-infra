@@ -17,13 +17,14 @@ spec:
       containers:
         - name: frontend
           image: sander1909/kwetter-frontend
+          imagePullPolicy: Always  # Set the image pull policy to Always
           ports:
             - containerPort: 80
           resources:
             limits:
               memory: 512Mi
               cpu: "0.5"
----            
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -43,6 +44,7 @@ spec:
       containers:
         - name: tweetapi
           image: sander1909/tweetapi
+          imagePullPolicy: Always  # Set the image pull policy to Always
           ports:
             - containerPort: 80
           resources:
@@ -69,6 +71,7 @@ spec:
       containers:
         - name: userprofileapi
           image: sander1909/userprofileapi
+          imagePullPolicy: Always  # Set the image pull policy to Always
           ports:
             - containerPort: 80
           resources:
